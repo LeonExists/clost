@@ -1,0 +1,54 @@
+{
+  "claude-fable-5": {
+    "input": 10,
+    "output": 50,
+    "cacheWrite": 12.5,
+    "cacheRead": 1.0
+  },
+  "claude-mythos-5": {
+    "input": 10,
+    "output": 50,
+    "cacheWrite": 12.5,
+    "cacheRead": 1.0
+  },
+  "claude-opus-5": {
+    "input": 5,
+    "output": 25,
+    "cacheWrite": 6.25,
+    "cacheRead": 0.5
+  },
+  "claude-opus-4": {
+    "input": 5,
+    "output": 25,
+    "cacheWrite": 6.25,
+    "cacheRead": 0.5
+  },
+  "claude-sonnet-5": {
+    "before": "2025-09-01",
+    "pricing": {
+      "input": 2,
+      "output": 10,
+      "cacheWrite": 2.5,
+      "cacheRead": 0.2
+    },
+    "after": "2025-09-01",
+    "pricingAfter": {
+      "input": 3,
+      "output": 15,
+      "cacheWrite": 3.75,
+      "cacheRead": 0.3
+    }
+  },
+  "claude-sonnet-4": {
+    "input": 3,
+    "output": 15,
+    "cacheWrite": 3.75,
+    "cacheRead": 0.3
+  },
+  "claude-haiku-4": {
+    "input": 1,
+    "output": 5,
+    "cacheWrite": 1.25,
+    "cacheRead": 0.1
+  }
+}
