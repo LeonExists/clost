@@ -21,9 +21,19 @@
     "anthropic",
     "claude-code"
   ],
+  "files": [
+    "dist",
+    "bin",
+    "defaults"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/clost.git"
+  },
+  "homepage": "https://github.com/yourusername/clost#readme",
   "license": "MIT",
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "dependencies": {
     "chalk": "^6.0.0",
