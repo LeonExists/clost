@@ -7,17 +7,21 @@ export function parseJsonlLine(line: string): Omit<UsageRecord, "project"> & { p
   try {
     const obj = JSON.parse(line);
 
-    if (!obj.usage || !obj.model || !obj.timestamp) return null;
-    if (typeof obj.usage.input_tokens !== "number" && typeof obj.usage.output_tokens !== "number") return null;
+    const timestamp = obj.timestamp;
+    const model = obj.model ?? obj.message?.model;
+    const usage = obj.usage ?? obj.message?.usage;
+
+    if (!usage || !model || !timestamp) return null;
+    if (typeof usage.input_tokens !== "number" && typeof usage.output_tokens !== "number") return null;
 
     return {
-      timestamp: obj.timestamp,
-      model: obj.model,
+      timestamp,
+      model,
       usage: {
-        input_tokens: obj.usage.input_tokens ?? 0,
-        output_tokens: obj.usage.output_tokens ?? 0,
-        cache_creation_input_tokens: obj.usage.cache_creation_input_tokens ?? 0,
-        cache_read_input_tokens: obj.usage.cache_read_input_tokens ?? 0,
+        input_tokens: usage.input_tokens ?? 0,
+        output_tokens: usage.output_tokens ?? 0,
+        cache_creation_input_tokens: usage.cache_creation_input_tokens ?? 0,
+        cache_read_input_tokens: usage.cache_read_input_tokens ?? 0,
       },
       project: "",
     };
