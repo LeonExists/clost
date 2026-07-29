@@ -28,9 +28,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/clost.git"
+    "url": "git+https://github.com/LeonExists/clost.git"
   },
-  "homepage": "https://github.com/yourusername/clost#readme",
+  "homepage": "https://github.com/LeonExists/clost#readme",
   "license": "MIT",
   "engines": {
     "node": ">=22"
