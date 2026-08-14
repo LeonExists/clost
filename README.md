@@ -22,6 +22,17 @@ npx clost
 npm install -g clost
 ```
 
+### From source
+
+Clone the repo and add `clost` to your PATH with a single command:
+
+```bash
+npm install   # installs dependencies and builds
+npm link      # symlinks `clost` onto your PATH
+```
+
+`npm link` runs the `prepare` script, so the TypeScript is compiled automatically — after it finishes, `clost` is available from any terminal. To remove it later, run `npm unlink -g clost`.
+
 ## Usage
 
 ```bash
